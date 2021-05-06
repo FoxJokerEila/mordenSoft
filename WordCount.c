@@ -6,7 +6,7 @@
 void main(int argc, char *input[])
 {
 	char file[100] = "C:\\Users\\ASUS\\Desktop\\201931061043\\info.txt";
-	char cup[MAX];
+	char contain[MAX];
 
 	int letter = 0;
 	int word = 0;
@@ -26,14 +26,14 @@ void main(int argc, char *input[])
 	// 计数
 	while (!feof(fp))
 	{
-		if (fgets(cup, MAX, fp) != NULL)
+		if (fgets(contain, MAX, fp) != NULL)
 		{
-			l = strlen(cup);
+			l = strlen(contain);
 			letter += l;
 			word++;
 			for (int i = 0; i < l - 1; i++)
 			{
-				if (cup[i] == ' ')
+				if (contain[i] == ' ')
 				{
 					word++;
 				}
